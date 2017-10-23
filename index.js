@@ -763,7 +763,7 @@ export default function(olLayer, glStyle, source, resolutions, spriteData, sprit
         if (instruction.rotate) {
           context.rotate(-instruction.rotate);
         }
-        context.translate.apply(context, instruction.translate.map((t) => -t));
+        context.translate.apply(context, instruction.translate.map(function(t) { return -t }));
       }
     }
   });
